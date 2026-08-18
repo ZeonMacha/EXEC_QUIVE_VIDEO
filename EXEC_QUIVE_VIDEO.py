@@ -21,6 +21,7 @@ from ctypes import wintypes
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
+APP_NAME = "EXEC_QUIVE=VIDEO/."
 STATE_FILE = Path(__file__).with_name("onepic_batch_state.json")
 
 AUDIO_EXTS = {
@@ -406,7 +407,7 @@ _BaseApp = TkinterDnD.Tk if _TKDND else tk.Tk
 class App(_BaseApp):
     def __init__(self) -> None:
         super().__init__()
-        self.title("小丸一图流 · 批量调用")
+        self.title(APP_NAME)
         self.geometry("820x620")
         self.minsize(720, 520)
 
@@ -436,6 +437,9 @@ class App(_BaseApp):
         pad = {"padx": 10, "pady": 6}
         frm = ttk.Frame(self)
         frm.pack(fill="both", expand=True, **pad)
+
+        ttk.Label(frm, text=APP_NAME, font=("Segoe UI", 14, "bold")).pack(anchor="w")
+        ttk.Label(frm, text="小丸一图流 · 批量调用").pack(anchor="w", pady=(0, 8))
 
         xiaowan_row = ttk.Frame(frm)
         xiaowan_row.pack(fill="x")
