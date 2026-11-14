@@ -136,7 +136,7 @@ pip install tkinterdnd2
 ### 封面图
 
 ```text
-.jpg  .jpeg  .png  .bmp  .webp  .tif  .tiff
+.jpg  .jpeg  .jfif  .png  .bmp  .webp  .tif  .tiff
 ```
 
 ### 音频
